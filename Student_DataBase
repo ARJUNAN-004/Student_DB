@@ -43,7 +43,7 @@ public class Main {
                         System.out.println("Enter student gender (Male/Female/Other):");
                         String gender = sc.nextLine();
                         if (!gender.equalsIgnoreCase("Male") && !gender.equalsIgnoreCase("Female") && !gender.equalsIgnoreCase("Other")) {
-                            throw new IllegalArgumentException("Gender should be Male, Female, or Other.");
+                            throw new IllegalArgumentException("Invalid input");
                         }
 
                         Stu newStudent = new Stu(name, id, contact, gender);
