@@ -23,27 +23,27 @@ public class Main {
                         System.out.println("Enter student name:");
                         String name = sc.nextLine();
                         if (!name.matches("[a-zA-Z ]+")) {
-                            throw new IllegalArgumentException("Invalid input format: Name should contain only alphabets.");
+                            throw new IllegalArgumentException("Invalid input format..");
                         }
 
                         System.out.println("Enter student ID:");
                         String idStr = sc.nextLine();
                         if (!idStr.matches("\\d+")) {
-                            throw new IllegalArgumentException("Invalid input format: ID should contain only numbers.");
+                            throw new IllegalArgumentException("Invalid input format..");
                         }
                         long id = Long.parseLong(idStr);
 
                         System.out.println("Enter student contact (10 digits):");
                         String contactStr = sc.nextLine();
                         if (!contactStr.matches("\\d{10}")) {
-                            throw new IllegalArgumentException("Invalid input format: Contact should be exactly 10 digits.");
+                            throw new IllegalArgumentException("Contact should be 10 digits..");
                         }
                         long contact = Long.parseLong(contactStr);
 
                         System.out.println("Enter student gender (Male/Female/Other):");
                         String gender = sc.nextLine();
                         if (!gender.equalsIgnoreCase("Male") && !gender.equalsIgnoreCase("Female") && !gender.equalsIgnoreCase("Other")) {
-                            throw new IllegalArgumentException("Invalid input format: Gender should be Male, Female, or Other.");
+                            throw new IllegalArgumentException("Gender should be Male, Female, or Other.");
                         }
 
                         Stu newStudent = new Stu(name, id, contact, gender);
@@ -96,7 +96,7 @@ public class Main {
                                             System.out.println("Enter new name:");
                                             String newName = sc.nextLine();
                                             if (!newName.matches("[a-zA-Z ]+")) {
-                                                throw new IllegalArgumentException("Invalid input format: Name should contain only alphabets.");
+                                                throw new IllegalArgumentException("Invalid input format..");
                                             }
                                             students[i].setName(newName);
                                             System.out.println("Name updated successfully!");
@@ -105,7 +105,7 @@ public class Main {
                                             System.out.println("Enter new ID:");
                                             String newIdStr = sc.nextLine();
                                             if (!newIdStr.matches("\\d+")) {
-                                                throw new IllegalArgumentException("Invalid input format: ID should contain only numbers.");
+                                                throw new IllegalArgumentException("Invalid input format..");
                                             }
                                             long newId = Long.parseLong(newIdStr);
                                             students[i].setId(newId);
@@ -115,7 +115,7 @@ public class Main {
                                             System.out.println("Enter new contact (10 digits):");
                                             String newContactStr = sc.nextLine();
                                             if (!newContactStr.matches("\\d{10}")) {
-                                                throw new IllegalArgumentException("Invalid input format: Contact should be exactly 10 digits.");
+                                                throw new IllegalArgumentException("Invalid input format..");
                                             }
                                             long newContact = Long.parseLong(newContactStr);
                                             students[i].setContact(newContact);
@@ -125,7 +125,7 @@ public class Main {
                                             System.out.println("Enter new gender (Male/Female/Other):");
                                             String newGender = sc.nextLine();
                                             if (!newGender.equalsIgnoreCase("Male") && !newGender.equalsIgnoreCase("Female") && !newGender.equalsIgnoreCase("Other")) {
-                                                throw new IllegalArgumentException("Invalid input format: Gender should be Male, Female, or Other.");
+                                                throw new IllegalArgumentException("Gender should be Male, Female, or Other..");
                                             }
                                             students[i].setGender(newGender);
                                             System.out.println("Gender updated successfully!");
